@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .col-sm {
+    float: left;
+    height: 50vh;
+    width: 50%;
+    text-align: center;
+    padding-top: 10%;
+    padding-left: 10%;
+    font-size: small
+    }
+
+.image-styling {
+    padding-left: 25%;
+}
+  

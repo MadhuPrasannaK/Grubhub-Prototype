@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Delivery-leftside {
+    float: left;
+    height: 70vh;
+    width: 50%;
+    text-align: left;
+    padding-top: 10%;
+    padding-left: 10%;
+    font-size: medium
+    }
+    
+    .Delivery-rightside {
+      float: right;
+      height: 70vh;
+      width: 70%;
+      background-image: url('../../images/DeliveryInfo.jpg');
+      background-position: left;
+      object-fit: contain; 
+    }

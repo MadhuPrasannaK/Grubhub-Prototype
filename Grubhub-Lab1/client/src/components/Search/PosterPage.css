@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .Postnote {
+    height: 50vh;
+    width: 100%;
+    background-image:url("https://assets.epicurious.com/photos/5b4cf0ed1b3ad94fe144f39b/16:9/w_2560%2Cc_limit/Five-Minute-Layered-Desserts-You-Can-Make-With-Store-Bought-Ingredients-EPI-11072018.jpg");
+  }

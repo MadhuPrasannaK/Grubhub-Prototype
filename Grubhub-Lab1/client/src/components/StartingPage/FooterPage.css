@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .Footnote {
+    height: 25vh;
+    width: 100%;
+    background-color: purple;
+    text-align: center;
+  }
+
+  .FooterInfo {
+    color: white;
+    padding-top: 12%;
+  }
