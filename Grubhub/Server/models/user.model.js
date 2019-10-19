@@ -10,8 +10,9 @@ const userSchema = new Schema({
     phone_number: { type: String, required: true },
     image: { type: String, required: true },
     address: { type: String, required: true },
-    restaurant: { type: Schema.ObjectId, ref: 'Restaurant' },
-    orders: [{ type: Schema.ObjectId, ref: 'Order' }]
+    restaurant: { type: String, required: true }
+    // restaurant: { type: Schema.ObjectId, ref: 'Restaurant' },
+    // orders: [{ type: Schema.ObjectId, ref: 'Order' }]
 });
 
 const User = mongoose.model('User', userSchema);
