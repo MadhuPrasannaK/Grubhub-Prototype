@@ -19,7 +19,14 @@ orderRouter.route('/order/update/:id').get((req, res) => {
         .catch(err => res.status(400).json('Error: '+err));
     })
     .catch(err => res.status(400).json('Error: '+err));
-})
+});
+
+orderRouter.route('/order/:id').get((req, res) => {
+    Order.find()
+    .then(orders => res.json(orders))
+    .catch(err => res.status(400).json('Error: '+err));
+});
+
 
 
 

@@ -4,7 +4,7 @@ let Item = require('../models/item.model');
 
 itemRouter.route('/item').get((req, res) => {
     Item.find()
-    .then(users => res.json(users))
+    .then(items => res.json(items))
     .catch(err => res.status(400).json('Error: '+err));
 });
 

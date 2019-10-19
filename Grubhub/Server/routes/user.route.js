@@ -2,13 +2,13 @@ const express = require("express");
 const userRouter = express.Router();
 let User = require('../models/user.model');
 
-userRouter.route('/').get((req, res) => {
+userRouter.route('/user').get((req, res) => {
     User.find()
     .then(users => res.json(users))
-    .catch(err => res.status(400).json('Error: '+err));
+    .catch(err => res.status(400).json('Error: '+err))
 });
 
-userRouter.route('/add').post((req, res) => {
+userRouter.route('/user/add').post((req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;
@@ -16,6 +16,7 @@ userRouter.route('/add').post((req, res) => {
     const phone_number = req.body.phone_number;
     const image = req.body.image;
     const address = req.body.address;
+    const restaurant = req.body.restaurant;
 
     const newUser = new User({
         name,
@@ -24,11 +25,14 @@ userRouter.route('/add').post((req, res) => {
         user_type,
         phone_number,
         image,
-        address
+        address,
+        restaurant
     });
-    newUser.save()
+
+    newUser.create()
     .then(() => res.json('User added!'))
     .catch(err => res.status(400).json('Error: '+err));
+    
 });
 
 module.exports=userRouter;

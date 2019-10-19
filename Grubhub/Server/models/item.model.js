@@ -8,8 +8,6 @@ const itemSchema = new Schema({
     description: { type: String, required: true },
     image: { type: String, required: true },
     section: { type: String, required: true }
-}, {
-    timestamps: true
 });
 
 const Item = mongoose.model('Item', itemSchema);
