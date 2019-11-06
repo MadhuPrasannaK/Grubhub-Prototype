@@ -8,7 +8,7 @@ class LandingPage extends Component {
   render() {
     return (
       <div>
-        <Image src={sideImage} width="700" height="700" />
+        
         <Container className="float-right container-landing align-center">
           <Col>
             <Link to="/login-user" className="font-weight-bold text-center">

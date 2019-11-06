@@ -26,7 +26,7 @@ const ConfirmOrder = require('../services/order.services/createOrder')
 const PushMessage = require('../services/order.services/updateMessages')
 
 //MongoDB Connection
-mongoose.connect('mongodb+srv://root:root1234@grubhubcluster-7frcc.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://root:root123@cluster0-bareu.mongodb.net/sampleTest1?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     poolSize: 2

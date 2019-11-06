@@ -1,5 +1,5 @@
 {
-  "name": "grubhub-server",
+  "name": "server",
   "version": "1.3.0",
   "description": "Server for Grubhub built on Kafka-Mongo",
   "main": "app.js",

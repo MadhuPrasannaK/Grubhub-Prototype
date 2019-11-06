@@ -5,9 +5,9 @@ import {
 
 const cloudinaryConfig = (req, res, next) => {
     config({
-        cloud_name: 'savya-cloudinary',
-        api_key: '565435984852792',
-        api_secret: '9CeQ9Ei2r-BVyo39US03imUFLtM',
+        cloud_name: 'ds8wtzdoe',
+        api_key: '621293452131651',
+        api_secret: 'qneJcVkGY04fYgq6Ip5MnU1pBRQ',
     })
     next()
 }

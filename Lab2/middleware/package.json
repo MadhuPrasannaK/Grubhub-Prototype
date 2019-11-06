@@ -1,5 +1,5 @@
 {
-  "name": "grubhub-middleware",
+  "name": "middleware",
   "version": "1.3.0",
   "description": "Middleware for Grubhub built on express.js connecting to Kafka",
   "main": "index.js",
