@@ -3,7 +3,7 @@ import axios from "axios";
 
 const getResults = (payload, ownProps) => {
     return dispatch => {
-        return axios.get(`http://localhost:3001/buyer/search`, {
+        return axios.get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/buyer/search`, {
             params: {
                 key: payload.search
             }
@@ -22,7 +22,7 @@ const getResults = (payload, ownProps) => {
 const getRestaurantDetails = payload => {
     return dispatch => {
         return axios
-            .get(`http://localhost:3001/restaurant/details/${payload.restaurant_id}`)
+            .get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/restaurant/details/${payload.restaurant_id}`)
             .then(response => {
                 if (response.status === 200) {
                     dispatch({
@@ -47,7 +47,7 @@ const addToCart = payload => {
 const placeOrder = (payload, ownProps) => {
     return dispatch => {
         return axios
-            .post("http://localhost:3001/order/confirm", payload)
+            .post("http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/order/confirm", payload)
             .then(response => {
                 if (response.status === 200) {
                     dispatch({

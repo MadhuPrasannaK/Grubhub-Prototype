@@ -26,7 +26,7 @@ require('./config/passport');
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://ec2-54-211-200-98.compute-1.amazonaws.com:3000',
     credentials: true
 }));
 

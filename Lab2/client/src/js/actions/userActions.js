@@ -8,7 +8,7 @@ import {
 
 const loginUser = (payload, ownProps) => {
     return dispatch => {
-        return axios.post("http://localhost:3001/login", payload).then(response => {
+        return axios.post("http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/login", payload).then(response => {
             if (response.status === 200) {
                 const userData = response.data;
                 cookie.set("token", userData.token, {
@@ -33,7 +33,7 @@ const loginUser = (payload, ownProps) => {
 
 const registerUser = (payload, ownProps) => {
     return dispatch => {
-        return axios.post("http://localhost:3001/register", payload).then(response => {
+        return axios.post("http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/register", payload).then(response => {
             if (response.status === 200) {
                 const userData = response.data;
                 cookie.set("token", userData.token, {
@@ -55,7 +55,7 @@ const registerUser = (payload, ownProps) => {
 
 const updateUser = payload => {
     return dispatch => {
-        return axios.put(`http://localhost:3001/userUpdate/${payload._id}`, payload)
+        return axios.put(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/userUpdate/${payload._id}`, payload)
             .then(response => {
                 if (response.status === 200) {
                     const userData = response.data.user;
@@ -80,7 +80,7 @@ const updateUser = payload => {
 
 const getUser = payload => {
     return dispatch => {
-        return axios.get(`http://localhost:3001/user/${payload.user_id}`)
+        return axios.get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/user/${payload.user_id}`)
             .then(response => {
                 if (response.status === 200) {
                     const userData = response.data;
@@ -95,7 +95,7 @@ const getUser = payload => {
 
 const uploadProfileImage = payload => {
     return dispatch => {
-        return axios.post(`http://localhost:3001/upload/image`, payload).then(response => {
+        return axios.post(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/upload/image`, payload).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.SET_PROFILE_PIC,

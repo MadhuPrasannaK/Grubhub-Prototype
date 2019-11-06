@@ -3,7 +3,7 @@ import axios from "axios";
 
 const getRestaurant = payload => {
     return dispatch => {
-        return axios.get(`http://localhost:3001/restaurant/${payload.restaurant_id}`)
+        return axios.get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/restaurant/${payload.restaurant_id}`)
             .then(response => {
                 if (response.status === 200) {
                     dispatch({
@@ -17,7 +17,7 @@ const getRestaurant = payload => {
 
 const getMenu = payload => {
     return dispatch => {
-        return axios.get(`http://localhost:3001/restaurant/menu/${payload.restaurant_id}`).then(response => {
+        return axios.get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/restaurant/menu/${payload.restaurant_id}`).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.SET_MENU,
@@ -32,7 +32,7 @@ const getMenu = payload => {
 
 const getRestaurantOrders = payload => {
     return dispatch => {
-        return axios.get(`http://localhost:3001/order/restaurant/${payload._id}`).then(response => {
+        return axios.get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/order/restaurant/${payload._id}`).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.SET_ORDERS,
@@ -45,7 +45,7 @@ const getRestaurantOrders = payload => {
 
 const changeStatus = payload => {
     return dispatch => {
-        return axios.put(`http://localhost:3001/order/update/${payload._id}`, {
+        return axios.put(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/order/update/${payload._id}`, {
             status: payload.status
         }).then(response => {
             if (response === 200) {
@@ -61,7 +61,7 @@ const changeStatus = payload => {
 const getOrderDetails = payload => {
     return dispatch => {
         return axios
-            .get(`http://localhost:3001/order/${payload.order_id}`)
+            .get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/order/${payload.order_id}`)
             .then(response => {
                 if (response.status === 200) {
                     dispatch({
@@ -76,7 +76,7 @@ const getOrderDetails = payload => {
 const getBuyerOrders = payload => {
     return dispatch => {
         return axios
-            .get(`http://localhost:3001/order/buyer/${payload._id}`)
+            .get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/order/buyer/${payload._id}`)
             .then(response => {
                 if (response.status === 200) {
                     dispatch({
@@ -90,7 +90,7 @@ const getBuyerOrders = payload => {
 
 const editSection = payload => {
     return dispatch => {
-        return axios.put("http://localhost:3001/restaurant/menu/section", payload).then(response => {
+        return axios.put("http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/restaurant/menu/section", payload).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.SET_MENU,
@@ -106,7 +106,7 @@ const editSection = payload => {
 const deleteSection = payload => {
     return dispatch => {
         return axios
-            .put("http://localhost:3001/restaurant/menu/section/delete", payload)
+            .put("http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/restaurant/menu/section/delete", payload)
             .then(response => {
                 if (response.status === 200) {
                     dispatch({
@@ -123,7 +123,7 @@ const deleteSection = payload => {
 const uploadRestaurantImage = payload => {
     return dispatch => {
         return axios
-            .post(`http://localhost:3001/upload/image`, payload)
+            .post(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/upload/image`, payload)
             .then(response => {
                 if (response.status === 200) {
                     dispatch({

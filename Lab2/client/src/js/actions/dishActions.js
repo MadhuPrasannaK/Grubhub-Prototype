@@ -3,7 +3,7 @@ import axios from "axios";
 
 const addDish = (payload, ownProps) => {
     return dispatch => {
-        return axios.post(`http://localhost:3001/dish/add`, payload).then(response => {
+        return axios.post(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/dish/add`, payload).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.SET_DISH,
@@ -17,7 +17,7 @@ const addDish = (payload, ownProps) => {
 
 const updateDish = (payload, ownProps) => {
     return dispatch => {
-        return axios.post(`http://localhost:3001/dish/update`, payload).then(response => {
+        return axios.post(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/dish/update`, payload).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.SET_DISH,
@@ -31,7 +31,7 @@ const updateDish = (payload, ownProps) => {
 
 const deleteDish = (payload, ownProps) => {
     return dispatch => {
-        return axios.post(`http://localhost:3001/dish/delete/`, payload).then(response => {
+        return axios.post(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/dish/delete/`, payload).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.CLEAR_DISH,
@@ -45,7 +45,7 @@ const deleteDish = (payload, ownProps) => {
 
 const getDish = payload => {
     return dispatch => {
-        return axios.get(`http://localhost:3001/dish/${payload.dish_id}`).then(response => {
+        return axios.get(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/dish/${payload.dish_id}`).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.SET_DISH,
@@ -58,7 +58,7 @@ const getDish = payload => {
 
 const uploadDishImage = payload => {
     return dispatch => {
-        return axios.post(`http://localhost:3001/upload/image`, payload).then(response => {
+        return axios.post(`http://ec2-3-82-232-60.compute-1.amazonaws.com:3001/upload/image`, payload).then(response => {
             if (response.status === 200) {
                 dispatch({
                     type: actionTypes.SET_DISH_IMAGE,
