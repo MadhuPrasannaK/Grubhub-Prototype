@@ -1,1 +1,3 @@
-# Lab2-013708071
+# Grubhub Application Prototype
+
+Part of CMPE 273
